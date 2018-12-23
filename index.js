@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 3000;
 let verified=false;
 
 app.use(function (req, res, next) {
