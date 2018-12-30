@@ -6,7 +6,8 @@
   "dependencies": {
     "bcrypt": "^3.0.2",
     "express": "^4.16.4",
-    "mysql": "^2.16.0"
+    "mysql": "^2.16.0",
+    "randomstring": "^1.1.5"
   },
   "devDependencies": {},
   "scripts": {
