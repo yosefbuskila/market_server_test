@@ -1,0 +1,30 @@
+register
+http://localhost:3000/user/reg
+{
+"regDeatails": ["moshe@gmail","1234","yos","ggg","null","null","mirski","5","jer","isr","3053"]
+}
+OK
+---------------
+login
+http://localhost:3000/user/login
+{
+	"email":"moshe@gmail",
+	"password":"1234"
+}
+ "success": true ,"token":"e7p7BZfasxvWj9bIHmPrthEgcxwm8cdx","id":88
+ ------------
+ logout
+ http://localhost:3000/user/logout
+ {
+"id": 88,
+"token":"RfEWubg2wwrxxrQlGOmu4jEV6Rjj7eJz"
+}
+true;
+------------------
+entry
+http://localhost:3000/
+{
+"id": 88,
+"token":"RfEWubg2wwrxxrQlGOmu4jEV6Rjj7eJz"
+}
+"..............."
