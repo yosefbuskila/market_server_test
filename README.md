@@ -708,8 +708,8 @@ h1
 	{mso-style-priority:9;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
-	mso-style-link:"ëåúøú 1 úå";
-	mso-style-next:øâéì;
+	mso-style-link:"Ã«Ã¥ÃºÃ¸Ãº 1 ÃºÃ¥";
+	mso-style-next:Ã¸Ã¢Ã©Ã¬;
 	margin-top:12.0pt;
 	margin-right:0cm;
 	margin-bottom:0cm;
@@ -741,8 +741,8 @@ p.MsoTitle, li.MsoTitle, div.MsoTitle
 	{mso-style-priority:10;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
-	mso-style-link:"ëåúøú è÷ñè úå";
-	mso-style-next:øâéì;
+	mso-style-link:"Ã«Ã¥ÃºÃ¸Ãº Ã¨Ã·Ã±Ã¨ ÃºÃ¥";
+	mso-style-next:Ã¸Ã¢Ã©Ã¬;
 	margin:0cm;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
@@ -766,8 +766,8 @@ p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
 	{mso-style-priority:10;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
-	mso-style-link:"ëåúøú è÷ñè úå";
-	mso-style-next:øâéì;
+	mso-style-link:"Ã«Ã¥ÃºÃ¸Ãº Ã¨Ã·Ã±Ã¨ ÃºÃ¥";
+	mso-style-next:Ã¸Ã¢Ã©Ã¬;
 	mso-style-type:export-only;
 	margin:0cm;
 	margin-bottom:.0001pt;
@@ -792,8 +792,8 @@ p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
 	{mso-style-priority:10;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
-	mso-style-link:"ëåúøú è÷ñè úå";
-	mso-style-next:øâéì;
+	mso-style-link:"Ã«Ã¥ÃºÃ¸Ãº Ã¨Ã·Ã±Ã¨ ÃºÃ¥";
+	mso-style-next:Ã¸Ã¢Ã©Ã¬;
 	mso-style-type:export-only;
 	margin:0cm;
 	margin-bottom:.0001pt;
@@ -818,8 +818,8 @@ p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
 	{mso-style-priority:10;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
-	mso-style-link:"ëåúøú è÷ñè úå";
-	mso-style-next:øâéì;
+	mso-style-link:"Ã«Ã¥ÃºÃ¸Ãº Ã¨Ã·Ã±Ã¨ ÃºÃ¥";
+	mso-style-next:Ã¸Ã¢Ã©Ã¬;
 	mso-style-type:export-only;
 	margin:0cm;
 	margin-bottom:.0001pt;
@@ -950,11 +950,11 @@ span.MsoSubtleEmphasis
 	mso-themetint:191;
 	font-style:italic;}
 span.1
-	{mso-style-name:"ëåúøú 1 úå";
+	{mso-style-name:"Ã«Ã¥ÃºÃ¸Ãº 1 ÃºÃ¥";
 	mso-style-priority:9;
 	mso-style-unhide:no;
 	mso-style-locked:yes;
-	mso-style-link:"ëåúøú 1";
+	mso-style-link:"Ã«Ã¥ÃºÃ¸Ãº 1";
 	mso-ansi-font-size:16.0pt;
 	mso-bidi-font-size:16.0pt;
 	font-family:"Calibri Light",sans-serif;
@@ -970,11 +970,11 @@ span.1
 	mso-themecolor:accent1;
 	mso-themeshade:191;}
 span.a
-	{mso-style-name:"ëåúøú è÷ñè úå";
+	{mso-style-name:"Ã«Ã¥ÃºÃ¸Ãº Ã¨Ã·Ã±Ã¨ ÃºÃ¥";
 	mso-style-priority:10;
 	mso-style-unhide:no;
 	mso-style-locked:yes;
-	mso-style-link:"ëåúøú è÷ñè";
+	mso-style-link:"Ã«Ã¥ÃºÃ¸Ãº Ã¨Ã·Ã±Ã¨";
 	mso-ansi-font-size:28.0pt;
 	mso-bidi-font-size:28.0pt;
 	font-family:"Calibri Light",sans-serif;
@@ -1618,7 +1618,7 @@ ul
 <style>
  /* Style Definitions */
  table.MsoNormalTable
-	{mso-style-name:"èáìä øâéìä";
+	{mso-style-name:"Ã¨Ã¡Ã¬Ã¤ Ã¸Ã¢Ã©Ã¬Ã¤";
 	mso-tstyle-rowband-size:0;
 	mso-tstyle-colband-size:0;
 	mso-style-noshow:yes;
@@ -1640,7 +1640,7 @@ ul
 	mso-bidi-font-family:Arial;
 	mso-bidi-theme-font:minor-bidi;}
 table.MsoTableGrid
-	{mso-style-name:"øùú èáìä";
+	{mso-style-name:"Ã¸Ã¹Ãº Ã¨Ã¡Ã¬Ã¤";
 	mso-tstyle-rowband-size:0;
 	mso-tstyle-colband-size:0;
 	mso-style-priority:39;
@@ -1743,38 +1743,38 @@ embed'><o:p>&nbsp;</o:p></p>
   [<b><o:p></o:p></b></p>
   <p class=MsoNormal dir=LTR style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:left;line-height:normal;direction:ltr;unicode-bidi:embed'><span
-  style='mso-spacerun:yes'> </span><span style='mso-tab-count:1'>               </span>Email
+  style='mso-spacerun:yes'>Â </span><span style='mso-tab-count:1'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span>Email
   (string),</p>
   <p class=MsoNormal dir=LTR style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:left;line-height:normal;direction:ltr;unicode-bidi:embed'><span
-  style='mso-tab-count:1'>                </span>Password (string),</p>
+  style='mso-tab-count:1'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span>Password (string),</p>
   <p class=MsoNormal dir=LTR style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:left;line-height:normal;direction:ltr;unicode-bidi:embed'><span
-  style='mso-tab-count:1'>                </span>First name (string),</p>
+  style='mso-tab-count:1'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span>First name (string),</p>
   <p class=MsoNormal dir=LTR style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:left;line-height:normal;direction:ltr;unicode-bidi:embed'><span
-  style='mso-tab-count:1'>                </span>Last name (string),</p>
+  style='mso-tab-count:1'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span>Last name (string),</p>
   <p class=MsoNormal dir=LTR style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:left;line-height:normal;direction:ltr;unicode-bidi:embed'><span
-  style='mso-tab-count:1'>                </span>phone (string),</p>
+  style='mso-tab-count:1'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span>phone (string),</p>
   <p class=MsoNormal dir=LTR style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:left;line-height:normal;direction:ltr;unicode-bidi:embed'><span
-  style='mso-tab-count:1'>                </span>type (string),</p>
+  style='mso-tab-count:1'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span>type (string),</p>
   <p class=MsoNormal dir=LTR style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:left;line-height:normal;direction:ltr;unicode-bidi:embed'><span
-  style='mso-tab-count:1'>                </span>Street (string),</p>
+  style='mso-tab-count:1'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span>Street (string),</p>
   <p class=MsoNormal dir=LTR style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:left;line-height:normal;direction:ltr;unicode-bidi:embed'><span
-  style='mso-tab-count:1'>                </span>Home (string),</p>
+  style='mso-tab-count:1'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span>Home (string),</p>
   <p class=MsoNormal dir=LTR style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:left;line-height:normal;direction:ltr;unicode-bidi:embed'><span
-  style='mso-tab-count:1'>                </span>City (string),</p>
+  style='mso-tab-count:1'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span>City (string),</p>
   <p class=MsoNormal dir=LTR style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:left;line-height:normal;direction:ltr;unicode-bidi:embed'><span
-  style='mso-tab-count:1'>                </span>state (string),</p>
+  style='mso-tab-count:1'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span>state (string),</p>
   <p class=MsoNormal dir=LTR style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:left;line-height:normal;direction:ltr;unicode-bidi:embed'><span
-  style='mso-tab-count:1'>                </span>Personal number (string)</p>
+  style='mso-tab-count:1'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span>Personal number (string)</p>
   <p class=MsoNormal dir=LTR style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:left;line-height:normal;direction:ltr;unicode-bidi:embed'>] </p>
   <p class=MsoNormal dir=LTR style='margin-bottom:0cm;margin-bottom:.0001pt;
@@ -1816,10 +1816,10 @@ embed'><o:p>&nbsp;</o:p></p>
   mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-bidi'><o:p></o:p></span></p>
   <p class=MsoNormal dir=LTR style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:left;line-height:normal;direction:ltr;unicode-bidi:embed'><span
-  style='mso-tab-count:1'>                </span>&quot;email&quot;: string,</p>
+  style='mso-tab-count:1'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span>&quot;email&quot;: string,</p>
   <p class=MsoNormal dir=LTR style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:left;line-height:normal;direction:ltr;unicode-bidi:embed'><span
-  style='mso-tab-count:1'>                </span>&quot;password&quot;: string</p>
+  style='mso-tab-count:1'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span>&quot;password&quot;: string</p>
   <p class=MsoNormal dir=LTR style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:left;line-height:normal;direction:ltr;unicode-bidi:embed'>}</p>
   <p class=MsoNormal dir=LTR style='margin-bottom:0cm;margin-bottom:.0001pt;
@@ -1827,7 +1827,7 @@ embed'><o:p>&nbsp;</o:p></p>
   {<o:p></o:p></b></p>
   <p class=MsoNormal dir=LTR style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:left;line-height:normal;direction:ltr;unicode-bidi:embed'><span
-  style='mso-spacerun:yes'> </span>&quot;success&quot;: true/<span class=GramE>false
+  style='mso-spacerun:yes'>Â </span>&quot;success&quot;: true/<span class=GramE>false
   ,</span></p>
   <p class=MsoNormal dir=LTR style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:left;line-height:normal;direction:ltr;unicode-bidi:embed'>token&quot;:
@@ -1891,7 +1891,7 @@ embed'><o:p>&nbsp;</o:p></p>
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:5.65pt 5.4pt 5.65pt 5.4pt'>
   <p class=MsoNormal dir=LTR style='margin-bottom:0cm;margin-bottom:.0001pt;
-  text-align:left;line-height:normal;direction:ltr;unicode-bidi:embed'>/…</p>
+  text-align:left;line-height:normal;direction:ltr;unicode-bidi:embed'>/.</p>
   </td>
   <td width=331 valign=top style='width:248.05pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -1912,7 +1912,7 @@ embed'><o:p>&nbsp;</o:p></p>
   text-align:left;line-height:normal;direction:ltr;unicode-bidi:embed'>}</p>
   <p class=MsoNormal dir=LTR style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:left;line-height:normal;direction:ltr;unicode-bidi:embed'><b>Response:</b>
-  <span class=GramE>…..</span> or &quot;not verified&quot;.</p>
+  <span class=GramE>...</span> or &quot;not verified&quot;.</p>
   </td>
  </tr>
 </table>
