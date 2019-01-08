@@ -1,0 +1,30 @@
+get all details of user(in login)
+
+---------------------
+
+general(no loged):
+ num of orders
+ num of items
+ chak if personal namber and email does not exist
+10 citys (array)
+ -----------------------------------------
+
+
+lest order: date, price,open/close or null (if customer is new).
+req:ID cart. res: chak if ID cart is of ID user and send cart details
+req: serch str from pruducts. res: Search result
+all categories of products
+req: category ID. res: all pruduct of these category
+add prudoct to cart. req: [id pruduct,Quantity, ID cart ]. chak if ID cart is of ID user
+remove prudoct from cart. req: [id pruduct cart ]. chak if this ID is of ID user
+remove all prudocts from cart. req: [id  cart ]. chak if this ID is of ID user
+
+get busy days from 10 days from today
+
+creat shiping. req: cart ID , city, street, shiping date, credit card num.  chak if this ID is of ID user
+
+--------------
+
+admin (chak if he admin and save picture)
+add prodoct
+edit product
