@@ -1,9 +1,9 @@
-get all details of user(in login)
+// get all details of user(in login)
 
 ---------------------
 
 general(no loged):
- num of orders
+ num of orders   ---   SELECT COUNT(id) as countOrders FROM `carts` WHERE done
  num of items
  chak if personal namber and email does not exist
 10 citys (array)
@@ -25,6 +25,6 @@ creat shiping. req: cart ID , city, street, shiping date, credit card num.  chak
 
 --------------
 
-admin (chak if he admin and save picture)
+admin (chak if he admin , save picture)
 add prodoct
 edit product

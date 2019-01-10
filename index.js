@@ -3,6 +3,7 @@ const bodyParser = require('body-parser')
 
 const usersConnect=require('./lib/users/userManagement')
 const userRouter = require('./lib/users/routeUser');
+const generalRouter=require('./routers/general/routerGeneral')
 
 const app = express()
 
@@ -10,6 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 app.use('/user', userRouter);
+app.use('/gen', generalRouter);
  
 const port = 3000;
 
