@@ -4,6 +4,7 @@ const bodyParser = require('body-parser')
 const usersConnect=require('./lib/users/userManagement')
 const userRouter = require('./lib/users/routeUser');
 const generalRouter=require('./routers/general/routerGeneral')
+const shopRouter=require('./routers/shop/routerShop')
 
 const app = express()
 
@@ -22,10 +23,10 @@ app.use(function (req, res, next) {
       req.client=ans;
       if (ans[0].id) next();
     },
-    function ()  {console.log('notOK');res.send('not verified');})    
+    function ()  {console.log('notOK');res.json(['not verified']);})    
   })
+  app.use('/api', shopRouter);
 
-app.get('/', (req, res) => res.send('Hello World!'))
 app.post('/', (req, res) =>{ res.send('Hello World post!')
 
 }   );

@@ -9,14 +9,18 @@ function query(sql, args) {
         });
     });
 }
-module.exports.numOrders = function () {
+module.exports.countRec = function (param) {
     return new Promise(function (resolve, reject) {
-            let sql = "SELECT COUNT(id) as countOrders FROM `carts` WHERE done";
+        let sql;
+        if(param=='orders')
+            sql = "SELECT COUNT(id) as count FROM `carts` WHERE done";
+            else if (param=='items')
+            sql='SELECT COUNT(id) as count FROM `products`'
             query(sql, [])
         .then(function (result) {
-            console.log(result)
-            resolve(result[0].countOrders);
+            
+            resolve(result[0].count);
         })
             .catch(function (err) { reject(-2); });
     });
-} 
+}  
