@@ -44,7 +44,31 @@ res:{
 }
 
 remove prudoct from cart. req: [id pruduct cart ]. chak if this ID is of ID user
+POST api/delete_item_cart
+{
+"id": 91,
+"token":"F52Wlpj5L2BwYCrqoP9GUuzLnJAOA2M8",
+"data":{
+	"itemID":12
+		}
+}
+res: {
+    "sucess": true/false
+}
+
 remove all prudocts from cart. req: [id  cart ]. chak if this ID is of ID user
+POST api/delete_item_cart
+{
+"id": 91,
+"token":"F52Wlpj5L2BwYCrqoP9GUuzLnJAOA2M8",
+"data":{
+	"cartID":12
+		}
+}
+res: {
+    "sucess": true/false
+}
+
 creat shiping. req: cart ID , city, street, shiping date, credit card num.  chak if this ID is of ID user
 
 lest order: date, price,open/close or null (if customer is new).

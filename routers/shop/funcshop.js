@@ -46,3 +46,18 @@ module.exports.addToCart = function (id,data) {
             .catch(function (err) {console.log('errrr',err); reject(); }); 
     });
 }   
+module.exports.deleteItemCart = function (userID,itemID,cartID) {
+    return new Promise(function (resolve, reject) {
+        let sql = "DELETE FROM `item_cart` WHERE user_id=? AND id=? ";
+        if(cartID)
+        sql="DELETE FROM `item_cart` WHERE user_id=? AND cart_id=? ";
+            query(sql, [userID,itemID||cartID])
+        .then(function (result) {
+            if(result.affectedRows>0){
+                resolve();
+                }
+                else{reject()}
+        })
+            .catch(function (err) { reject(); });
+    });
+} 
