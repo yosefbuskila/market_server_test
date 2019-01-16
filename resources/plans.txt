@@ -27,7 +27,22 @@ return
     "id": integer
 }
 
-add prudoct to cart. req: [id pruduct,Quantity, ID cart ]. chak if ID cart is of ID user
+add prudoct to cart. 
+POST api/add_to_cart
+req: {
+"id": 91,
+"token":"F52Wlpj5L2BwYCrqoP9GUuzLnJAOA2M8",
+"data":{
+	"cartID":12,
+	"product_id":2,
+	"Quantity":-1
+	}
+}
+res:{
+    "sucess": true/false,
+    "id": integer
+}
+
 remove prudoct from cart. req: [id pruduct cart ]. chak if this ID is of ID user
 remove all prudocts from cart. req: [id  cart ]. chak if this ID is of ID user
 creat shiping. req: cart ID , city, street, shiping date, credit card num.  chak if this ID is of ID user

@@ -17,13 +17,13 @@ app.use('/gen', generalRouter);
 const port = 3000;
 
 app.use(function (req, res, next) {
-    console.log('Time:', Date.now(),req.body)
+    // console.log('Time:', Date.now(),req.body)
     usersConnect.chakConnect(req.body.id, req.body.token).then((ans) => {
       // console.log('[ ',ans ,' ]');
       req.client=ans;
       if (ans[0].id) next();
     },
-    function ()  {console.log('notOK');res.json(['not verified']);})    
+    function ()  {console.log('notOK');res.json({"sucess": false,"Details":"not verified"});})    
   })
   app.use('/api', shopRouter);
 

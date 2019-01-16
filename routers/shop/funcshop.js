@@ -3,8 +3,10 @@ const con = require('../../lib/db/connectDb');
 function query(sql, args) {
     return new Promise((resolve, reject) => {
         con.query(sql, args, (err, rows) => {
-            if (err)
+            if (err){
                 return reject(err);
+                console.log("err func",err)
+            }
             resolve(rows);
         });
     });
@@ -22,3 +24,25 @@ module.exports.createCart = function (id) {
             .catch(function (err) { reject(); });
     });
 }  
+module.exports.addToCart = function (id,data) {
+    return new Promise(function (resolve, reject) {
+
+        let sql = "SELECT id FROM carts WHERE id=? AND id_user=?";
+            query(sql, [data.cartID,id])
+        .then(function (result) {
+            if(result.length!==1){
+                console.log(result)
+                return Promise.reject();
+                }
+        }).then(()=>{
+            // console.log("1")
+            let sql="INSERT INTO `item_cart` ( `product_id`, `cart_id`, `user_id`, `units`, `price_sum`) VALUES(?,?,?,?,(SELECT price FROM products WHERE id=?)*?);"
+            return query(sql, [data.product_id,data.cartID,id,data.Quantity,data.product_id,data.Quantity])
+        }).then((ans)=>{
+            // console.log(ans)
+            if(ans.affectedRows==1)
+            resolve(ans.insertId)
+        })
+            .catch(function (err) {console.log('errrr',err); reject(); }); 
+    });
+}   
