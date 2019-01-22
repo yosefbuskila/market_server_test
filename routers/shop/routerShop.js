@@ -20,5 +20,20 @@ router.delete('/delete_item_cart', function (req, res) {
         res.json({"sucess": true     });
 }).catch(() => {res.json({"sucess": false})})
     })
+router.post('/update_ship', function (req, res) {
+    func.updateShip(req.client[0].id,req.body.data).then(() =>{
+        res.json({"sucess": true});
+}).catch(() => {res.json({"sucess": false})})
+    })
+router.post('/last_order', function (req, res) {
+    func.lastOrder(req.client[0].id).then((result) =>{
+        res.json({"sucess": true, "data":result});
+}).catch(() => {res.json({"sucess": false})})
+    })
+router.post('/items_cart', function (req, res) {
+    func.itemsCart(req.client[0].id,req.body.data.cartID).then((result) =>{
+        res.json({"sucess": true, "data":result});
+}).catch(() => {res.json({"sucess": false})})
+    })
 
 module.exports = router;  

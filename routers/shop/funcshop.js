@@ -61,3 +61,47 @@ module.exports.deleteItemCart = function (userID,itemID,cartID) {
             .catch(function (err) { reject(); });
     });
 } 
+module.exports.updateShip = function (userID,data) {
+    return new Promise(function (resolve, reject) {
+        let sql = "UPDATE `carts` SET `price`=(SELECT SUM(price_sum) FROM item_cart WHERE cart_id=?),";
+        sql+="`city_ship`=?,`street_ship`=?,`date_ship`=?,`date_order`=CURRENT_DATE,`credit_num`=?,`done`=1 WHERE id=? AND id_user=?"
+            query(sql, [data.cartID,data.city,data.street,data.date,data.creditNam,data.cartID,userID])
+        .then(function (result) {
+            if(result.affectedRows===1){
+                resolve();
+                }
+                else{reject()}
+        })
+            .catch(function (err) { reject(); });
+    });
+} 
+module.exports.lastOrder = function (userID) {
+    return new Promise(function (resolve, reject) {
+        let sql = "SELECT * FROM `carts` WHERE id=(SELECT max(id) FROM carts WHERE id_user=?)";
+            query(sql, [userID])
+        .then(function (result) {
+            if(result.length===0){
+                resolve([]);
+                }
+                else if(result[0].done===0){
+                    query("SELECT sum(price_sum) as priceProd FROM item_cart WHERE cart_id=?",[result[0].id])
+                    .then((result2)=>{
+                        result[0].price=result2[0].priceProd;
+                        resolve(result[0]);
+                    })
+                }
+                else resolve(result[0]);
+        })
+            .catch(function (err) { reject(); });
+    });
+} 
+module.exports.itemsCart = function (userID,cartId) {
+    return new Promise(function (resolve, reject) {
+        let sql = "SELECT * FROM `item_cart` WHERE user_id=? and cart_id=?";
+            query(sql, [userID,cartId])
+        .then(function (result) {
+            resolve(result)
+        })
+            .catch(function (err) { reject(); });
+    });
+} 

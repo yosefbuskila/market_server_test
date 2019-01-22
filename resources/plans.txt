@@ -70,9 +70,67 @@ res: {
 }
 
 creat shiping. req: cart ID , city, street, shiping date, credit card num.  chak if this ID is of ID user
+POST /api/update_ship
+req: POST{
+"id": 91,
+"token":"F52Wlpj5L2BwYCrqoP9GUuzLnJAOA2M8",
+"data":{
+	"cartID":12,
+	"city":"afula",
+	"street":"mirsk",
+	"date":"2019/07/08",
+	"creditNam":"45800000"
+		}
+}
+res: {
+    "sucess": true
+}
 
 lest order: date, price,open/close or null (if customer is new).
+POST /api/last_order{
+"id": 91,
+"token":"F52Wlpj5L2BwYCrqoP9GUuzLnJAOA2M8"
+}
+res: {
+    "sucess": true,
+    "data":[] or {
+        "id": 24,
+        "id_user": 91,
+        "date_cart": "2019-01-21T22:00:00.000Z",
+        "price": 20/null,
+        "city_ship": null,
+        "street_ship": null,
+        "date_ship": null,
+        "date_order": null,
+        "credit_num": null,
+        "done": 0/1
+    }
+}
+
 req:ID cart. res: chak if ID cart is of ID user and send cart details
+POST /api/items_cart
+req: {
+"id": 91,
+"token":"F52Wlpj5L2BwYCrqoP9GUuzLnJAOA2M8",
+"data":{
+	"cartID":23
+		}
+}
+res: {
+    "sucess": true,
+    "data":[] or [
+        {
+            "id": 64,
+            "product_id": 2,
+            "cart_id": 23,
+            "user_id": 91,
+            "units": 2,
+            "price_sum": 30
+        },...
+        
+    ]
+}
+
 req: serch str from pruducts. res: Search result
 all categories of products
 req: category ID. res: all pruduct of these category
