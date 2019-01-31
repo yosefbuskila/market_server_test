@@ -105,3 +105,40 @@ module.exports.itemsCart = function (userID,cartId) {
             .catch(function (err) { reject(); });
     });
 } 
+module.exports.products = function (filter,value) {
+    return new Promise(function (resolve, reject) {
+        console.log('filter',filter, value)
+        let sql = "SELECT * FROM `products` WHERE ";
+        if(filter==='category')
+        sql+= " categery_id= ? ";
+        else if(filter==="name"){
+        sql+=' name LIKE ? '
+        value='%'+value+'%';
+        }
+        query(sql, [value])
+        .then(function (result) {
+            resolve(result)
+        })
+            .catch(function (err) { reject(err); });
+    });
+}  
+module.exports.categories = function () {
+    return new Promise(function (resolve, reject) {
+        let sql = "SELECT * FROM `categories`";
+            query(sql, [])
+        .then(function (result) {
+            resolve(result)
+        })
+            .catch(function (err) { reject(er); });
+    });
+}
+module.exports.busyDay = function () {
+    return new Promise(function (resolve, reject) {
+        let sql = "SELECT date_ship FROM `carts` WHERE date_ship is NOT null GROUP BY date_ship HAVING COUNT(id) >3";
+            query(sql, [])
+        .then(function (result) {
+            resolve(result)
+        })
+            .catch(function (err) { reject(er); });
+    });
+}

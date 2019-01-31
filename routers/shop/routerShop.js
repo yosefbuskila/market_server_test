@@ -35,5 +35,20 @@ router.post('/items_cart', function (req, res) {
         res.json({"sucess": true, "data":result});
 }).catch(() => {res.json({"sucess": false})})
     })
+router.post('/product/:filter/:value', function (req, res) {
+    func.products(req.params.filter,req.params.value).then((result) =>{
+        res.json({"sucess": true, "data":result});
+}).catch((err) => {console.log('err product',err);res.json({"sucess": false})})
+    })
+router.post('/categories', function (req, res) {
+    func.categories().then((result) =>{
+        res.json({"sucess": true, "data":result});
+}).catch((err) => {console.log('err',err);res.json({"sucess": false})})
+    })
+router.post('/busy_day', function (req, res) {
+    func.busyDay().then((result) =>{
+        res.json({"sucess": true, "data":result});
+}).catch((err) => {console.log('err',err);res.json({"sucess": false})})
+    })
 
 module.exports = router;  
