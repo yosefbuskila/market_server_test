@@ -211,5 +211,18 @@ res:{
 --------------
 
 admin (chak if he admin , save picture)
+
 add prodoct
+POST /admin/add
+req: form data - id:integer, token:string,sampleFile:file,productName:string,categery_id:integer,price:flout.
+res: {
+    "sucess": true/false,
+    "id": 25
+}
+
 edit product
+POST /admin/update
+req: form data - id:integer, token:string,sampleFile:file,productName:string,categery_id:integer,price:flout,productID:integer.
+res: {
+    "sucess": true/false
+}
