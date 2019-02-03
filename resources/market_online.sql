@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 09, 2019 at 01:47 PM
+-- Generation Time: Feb 03, 2019 at 07:04 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -43,14 +43,6 @@ CREATE TABLE `carts` (
   `done` tinyint(1) DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `carts`
---
-
-INSERT INTO `carts` (`id`, `id_user`, `date_cart`, `price`, `city_ship`, `street_ship`, `date_ship`, `date_order`, `credit_num`, `done`) VALUES
-(1, 15, '2019-01-23', NULL, NULL, NULL, NULL, NULL, NULL, 0),
-(2, 15, '2019-01-23', 15.23, NULL, NULL, NULL, NULL, NULL, 0);
-
 -- --------------------------------------------------------
 
 --
@@ -77,13 +69,6 @@ CREATE TABLE `item_cart` (
   `price_sum` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `item_cart`
---
-
-INSERT INTO `item_cart` (`id`, `product_id`, `cart_id`, `user_id`, `units`, `price_sum`) VALUES
-(1, 15, 21, 65, 5, 152478000000.522);
-
 -- --------------------------------------------------------
 
 --
@@ -97,13 +82,6 @@ CREATE TABLE `products` (
   `price` float NOT NULL,
   `picture` varchar(256) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `products`
---
-
-INSERT INTO `products` (`id`, `name`, `categery_id`, `price`, `picture`) VALUES
-(1, 'aaa', 12, 12.1235, '123');
 
 --
 -- Indexes for dumped tables
@@ -147,25 +125,25 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `carts`
 --
 ALTER TABLE `carts`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `item_cart`
 --
 ALTER TABLE `item_cart`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
