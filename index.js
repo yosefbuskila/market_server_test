@@ -1,6 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const fileUpload = require('express-fileupload');
+var cors = require('cors')
 
 const usersConnect=require('./lib/users/userManagement')
 const userRouter = require('./lib/users/routeUser');
@@ -10,6 +11,7 @@ const adminRouter=require('./routers/admin/routerAdmin')
 
 const app = express()
 
+app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
