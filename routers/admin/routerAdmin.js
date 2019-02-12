@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const func = require('./funcAdmin')
+// const func = require('./funcAdmin')
 const con = require('../../lib/db/connectDb');
 
 router.use(function (req, res, next) {
