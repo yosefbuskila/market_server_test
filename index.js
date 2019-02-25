@@ -1,18 +1,32 @@
+//test
 const express = require('express')
+const bodyParser = require('body-parser')
+
+const usersConnect=require('./lib/users/userManagement')
+const userRouter = require('./lib/users/routeUser');
+
 const app = express()
 
-const usersConמect=require('./lib/users/userManagement')
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
+app.use('/user', userRouter);
+ 
 const port = 3000;
-let verified=false;
 
 app.use(function (req, res, next) {
-    console.log('Time:', Date.now())
-    usersConמect.reg(['yoszeezf@gma','1234','yos','bus','null','null','mirski','5','jer','isr','3053'])
-    .then(resp=>next())
-    .catch(function (resp){console.log(resp);res.send('not verified');} )
+    console.log('Time:', Date.now(),req.body)
+    usersConnect.chakConnect(req.body.id, req.body.token).then((ans) => {
+      // console.log('[ ',ans ,' ]');
+      req.client=ans;
+      if (ans[0].id) next();
+    },
+    function ()  {console.log('notOK');res.send('not verified');})    
   })
 
 app.get('/', (req, res) => res.send('Hello World!'))
+app.post('/', (req, res) =>{ res.send('Hello World post!')
+
+}   );
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`)); 
