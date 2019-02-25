@@ -1,32 +1,43 @@
-//test
 const express = require('express')
 const bodyParser = require('body-parser')
+const fileUpload = require('express-fileupload');
+var cors = require('cors')
 
 const usersConnect=require('./lib/users/userManagement')
 const userRouter = require('./lib/users/routeUser');
+const generalRouter=require('./routers/general/routerGeneral')
+const shopRouter=require('./routers/shop/routerShop')
+const adminRouter=require('./routers/admin/routerAdmin')
 
 const app = express()
 
+app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
+app.use(fileUpload({
+  limits: { fileSize:  1024 * 1024 },
+}));
+
 app.use('/user', userRouter);
+app.use('/gen', generalRouter);
  
 const port = 3000;
 
 app.use(function (req, res, next) {
-    console.log('Time:', Date.now(),req.body)
+    // console.log('Time:', Date.now(),req.body)
     usersConnect.chakConnect(req.body.id, req.body.token).then((ans) => {
       // console.log('[ ',ans ,' ]');
       req.client=ans;
       if (ans[0].id) next();
     },
-    function ()  {console.log('notOK');res.send('not verified');})    
+    function ()  {console.log('notOK');res.json({"sucess": false,"Details":"not verified"});})    
   })
+  app.use('/api', shopRouter);
+  app.use('/admin', adminRouter);
 
-app.get('/', (req, res) => res.send('Hello World!'))
 app.post('/', (req, res) =>{ res.send('Hello World post!')
 
 }   );
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`)); 
+app.listen(port, () => console.log(`app listening on port ${port}!`)); 

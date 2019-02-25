@@ -7,8 +7,13 @@
 <<<<<<< HEAD
 =======
     "body-parser": "^1.18.3",
+<<<<<<< HEAD
 >>>>>>> 4a4407440119665a910bcf6bc278af72bb4f2f8d
+=======
+    "cors": "^2.8.5",
+>>>>>>> 6b5bb00485cacc12bddfaead128d8f6f7680a859
     "express": "^4.16.4",
+    "express-fileupload": "^1.1.1-alpha.1",
     "mysql": "^2.16.0",
     "password-hash": "^1.2.2",
     "randomstring": "^1.1.5"

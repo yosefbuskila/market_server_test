@@ -1,0 +1,228 @@
+// get all details of user(in login)
+
+---------------------
+
+general(no loged):
+ {
+ num of orders   ---   SELECT COUNT(id) as countOrders FROM `carts` WHERE done
+ num of items
+ GET gen/sum/orders?items
+ return [integer]
+ }
+
+ chak if personal namber and email are exist
+GET user/exist/personal_number?email/valueToChack
+return [true if exist or false]
+
+10 citys (array) 
+GET gen/cities
+return [sities]
+ -----------------------------------------
+
+create cart res:id cart
+POST /api/create_cart
+return
+{
+    "sucess": true/false,
+    "id": integer
+}
+
+add prudoct to cart. 
+POST api/add_to_cart
+req: {
+"id": 91,
+"token":"F52Wlpj5L2BwYCrqoP9GUuzLnJAOA2M8",
+"data":{
+	"cartID":12,
+	"product_id":2,
+	"Quantity":-1
+	}
+}
+res:{
+    "sucess": true/false,
+    "id": integer
+}
+
+remove prudoct from cart. req: [id pruduct cart ]. chak if this ID is of ID user
+POST api/delete_item_cart
+{
+"id": 91,
+"token":"F52Wlpj5L2BwYCrqoP9GUuzLnJAOA2M8",
+"data":{
+	"itemID":12
+		}
+}
+res: {
+    "sucess": true/false
+}
+
+remove all prudocts from cart. req: [id  cart ]. chak if this ID is of ID user
+POST api/delete_item_cart
+{
+"id": 91,
+"token":"F52Wlpj5L2BwYCrqoP9GUuzLnJAOA2M8",
+"data":{
+	"cartID":12
+		}
+}
+res: {
+    "sucess": true/false
+}
+
+creat shiping. req: cart ID , city, street, shiping date, credit card num.  chak if this ID is of ID user
+POST /api/update_ship
+req: POST{
+"id": 91,
+"token":"F52Wlpj5L2BwYCrqoP9GUuzLnJAOA2M8",
+"data":{
+	"cartID":12,
+	"city":"afula",
+	"street":"mirsk",
+	"date":"2019/07/08",
+	"creditNam":"45800000"
+		}
+}
+res: {
+    "sucess": true
+}
+
+lest order: date, price,open/close or null (if customer is new).
+POST /api/last_order{
+"id": 91,
+"token":"F52Wlpj5L2BwYCrqoP9GUuzLnJAOA2M8"
+}
+res: {
+    "sucess": true,
+    "data":[] or {
+        "id": 24,
+        "id_user": 91,
+        "date_cart": "2019-01-21T22:00:00.000Z",
+        "price": 20/null,
+        "city_ship": null,
+        "street_ship": null,
+        "date_ship": null,
+        "date_order": null,
+        "credit_num": null,
+        "done": 0/1
+    }
+}
+
+req:ID cart. res: chak if ID cart is of ID user and send cart details
+POST /api/items_cart
+req: {
+"id": 91,
+"token":"F52Wlpj5L2BwYCrqoP9GUuzLnJAOA2M8",
+"data":{
+	"cartID":23
+		}
+}
+res: {
+    "sucess": true,
+    "data":[] or [
+        {
+            "id": 64,
+            "product_id": 2,
+            "cart_id": 23,
+            "user_id": 91,
+            "units": 2,
+            "price_sum": 30
+        },...
+        
+    ]
+}
+
+req: serch str from pruducts. res: Search result
+POST /api/product/name/<strSerch>
+req:{
+"id": 91,
+"token":"F52Wlpj5L2BwYCrqoP9GUuzLnJAOA2M8"
+}
+res:{
+    "sucess": true/false,
+    "data": [
+        {
+            "id": 2,
+            "name": "banana",
+            "categery_id": 13,
+            "price": 15,
+            "picture": ban.jpeg
+        }
+    ]
+}
+
+req: category ID. res: all pruduct of these category
+POST /api/product/category/<idCategory>
+req:{
+"id": 91,
+"token":"F52Wlpj5L2BwYCrqoP9GUuzLnJAOA2M8"
+}
+res:{
+    "sucess": true/false,
+    "data": [
+        {
+            "id": 2,
+            "name": "banana",
+            "categery_id": 13,
+            "price": 15,
+            "picture": ban.jpeg
+        }
+    ]
+}
+
+all categories of products
+POST /api/categories
+req:{
+"id": 91,
+"token":"F52Wlpj5L2BwYCrqoP9GUuzLnJAOA2M8"
+}
+res:{
+    "sucess": true/false,
+    "data": [
+        {
+            "id": 2,
+            "name": "mamtakim"
+        },
+        {
+            "id": 1,
+            "name": "yerakot"
+        }
+    ]
+}
+
+get busy days from 10 days from today
+POST /api/busy_day
+req:{
+"id": 91,
+"token":"F52Wlpj5L2BwYCrqoP9GUuzLnJAOA2M8"
+}
+res:{
+    "sucess": true/false,
+    "data": [
+        {
+            "date_ship": "2018-12-11T22:00:00.000Z"
+        },
+        {
+            "date_ship": "2019-01-21T22:00:00.000Z"
+        }.....
+    ]
+}
+
+
+--------------
+
+admin (chak if he admin , save picture)
+
+add prodoct
+POST /admin/add
+req: form data - id:integer, token:string,sampleFile:file,productName:string,categery_id:integer,price:flout.
+res: {
+    "sucess": true/false,
+    "id": 25
+}
+
+edit product
+POST /admin/update
+req: form data - id:integer, token:string,sampleFile:file,productName:string,categery_id:integer,price:flout,productID:integer.
+res: {
+    "sucess": true/false
+}
