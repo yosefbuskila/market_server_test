@@ -13,7 +13,7 @@ function query(sql, args) {
 }
 module.exports.createCart = function (id) {
     return new Promise(function (resolve, reject) {
-        let sql = "INSERT INTO `carts` (`id_user`,date_cart) VALUES ( ? , CURRENT_DATE )";
+        let sql = "INSERT INTO `carts` (`id_user`,date_cart,price) VALUES ( ? , CURRENT_DATE,0 )";
             query(sql, [id])
         .then(function (result) {
             if(result.affectedRows==1){
@@ -86,11 +86,11 @@ module.exports.lastOrder = function (userID) {
                 else if(result[0].done===0){
                     query("SELECT sum(price_sum) as priceProd FROM item_cart WHERE cart_id=?",[result[0].id])
                     .then((result2)=>{
-                        result[0].price=result2[0].priceProd;
-                        resolve(result[0]);
+                        result[0].price=result2[0].priceProd|0;
+                        resolve(result);
                     })
                 }
-                else resolve(result[0]);
+                else resolve(result);
         })
             .catch(function (err) { reject(); });
     });
