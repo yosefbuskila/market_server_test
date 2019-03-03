@@ -22,7 +22,7 @@ app.use(fileUpload({
 app.use('/user', userRouter);
 app.use('/gen', generalRouter);
  
-const port = 3000;
+const port = 3001;
 
 app.use(function (req, res, next) {
     // console.log('Time:', Date.now(),req.body)
