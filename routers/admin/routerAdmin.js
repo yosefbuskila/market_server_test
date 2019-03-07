@@ -41,11 +41,13 @@ function saveFile(req,resultID) {
 router.post('/add', function (req, res) {
     let sampleFile={};
     sampleFile.name=null;
+    console.log(req.files)
     if (req.files)
     sampleFile = req.files.sampleFile;
     if (sampleFile.truncated)
             return res.json({ "sucess": false });
     add(req.body.productName, req.body.categery_id, req.body.price, sampleFile.name).then((result) => {
+        console.log('rs insert',result)
         if(sampleFile.name==null)
         return(result);
         return saveFile(req,result)

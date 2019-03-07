@@ -12,6 +12,9 @@ const adminRouter=require('./routers/admin/routerAdmin')
 const app = express()
 
 app.use(cors())
+
+app.use(express.static('public'))
+
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
