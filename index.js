@@ -15,11 +15,17 @@ app.use(cors())
 
 app.use(express.static('public'))
 
-app.use(bodyParser.urlencoded({ extended: false }))
+// app.use((req, res, next)=>{
+//   console.log('bdyFirst', req) 
+//   next()
+// })
+
 app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
+// app.use(bodyParser.urlencoded)
 
 app.use(fileUpload({
-  limits: { fileSize:  1024 * 1024 },
+  limits: { fileSize:  1024 * 1024 }, 
 }));
 
 app.use('/user', userRouter);
@@ -28,7 +34,7 @@ app.use('/gen', generalRouter);
 const port = 3001;
 
 app.use(function (req, res, next) {
-    // console.log('Time:', Date.now(),req.body)
+    console.log('bd',req.body)
     usersConnect.chakConnect(req.body.id, req.body.token).then((ans) => {
       // console.log('[ ',ans ,' ]');
       req.client=ans;
