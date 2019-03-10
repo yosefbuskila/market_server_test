@@ -97,7 +97,7 @@ module.exports.lastOrder = function (userID) {
 } 
 module.exports.itemsCart = function (userID,cartId) {
     return new Promise(function (resolve, reject) {
-        let sql = "SELECT * FROM `item_cart` WHERE user_id=? and cart_id=?";
+        let sql = "SELECT * FROM `item_cart` INNER JOIN `products` on `products`.`id`=`item_cart`.`product_id` WHERE `item_cart`.`user_id`=? and `item_cart`.`cart_id`=?";
             query(sql, [userID,cartId])
         .then(function (result) {
             resolve(result)
