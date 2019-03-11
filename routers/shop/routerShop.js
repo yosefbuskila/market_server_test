@@ -15,7 +15,7 @@ router.post('/add_to_cart', function (req, res) {
         res.json({"sucess": true ,  "id": resultID    });
 }).catch(() => {res.json({"sucess": false})})
     })
-router.delete('/delete_item_cart', function (req, res) {
+router.post('/delete_item_cart', function (req, res) {
     func.deleteItemCart(req.client[0].id,req.body.data.itemID,req.body.data.cartID).then(() =>{
         res.json({"sucess": true     });
 }).catch(() => {res.json({"sucess": false})})
