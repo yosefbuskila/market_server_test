@@ -139,6 +139,6 @@ module.exports.busyDay = function () {
         .then(function (result) {
             resolve(result)
         })
-            .catch(function (err) { reject(er); });
+            .catch(function (err) { reject(err); });
     });
 }
