@@ -33,9 +33,9 @@ const app = express()
 
 // app.use('/user', userRouter);
 // app.use('/gen', generalRouter);
-const port = process.env.PORT;
+let port = process.env.PORT;
 if (port == null || port == "") {
-  p
+  port=3001;
 }
 
 // app.use(function (req, res, next) {
