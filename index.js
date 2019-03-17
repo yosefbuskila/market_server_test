@@ -12,9 +12,12 @@ const adminRouter=require('./routers/admin/routerAdmin')
 const app = express()
 
 app.use(cors())
-
 app.use(express.static('public'))
 
+app.use(['/home','/market','/logIn','/reg','/admin'],function(req, res) {
+  // Use res.sendfile, as it streams instead of reading the file into memory.
+  res.sendfile(__dirname + '/public/index.html');
+});
 // app.use((req, res, next)=>{
 //   console.log('bdyFirst', req) 
 //   next()
