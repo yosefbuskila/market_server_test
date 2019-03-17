@@ -7,7 +7,7 @@ var cors = require('cors')
 // const userRouter = require('./lib/users/routeUser');
 // const generalRouter=require('./routers/general/routerGeneral')
 // const shopRouter=require('./routers/shop/routerShop')
-// const adminRouter=require('./routers/admin/routerAdmin')
+const adminRouter=require('./routers/admin/routerAdmin')
 
 const app = express()
 
