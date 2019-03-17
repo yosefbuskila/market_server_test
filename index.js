@@ -33,8 +33,10 @@ const app = express()
 
 // app.use('/user', userRouter);
 // app.use('/gen', generalRouter);
- 
-// const port = 3001;
+const port = process.env.PORT;
+if (port == null || port == "") {
+  p
+}
 
 // app.use(function (req, res, next) {
 //     console.log('bd',req.body)
