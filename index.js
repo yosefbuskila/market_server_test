@@ -5,7 +5,7 @@ var cors = require('cors')
 
 // const usersConnect=require('./lib/users/userManagement')
 // const userRouter = require('./lib/users/routeUser');
-const generalRouter=require('./routers/general/routerGeneral')
+// const generalRouter=require('./routers/general/routerGeneral')
 // const shopRouter=require('./routers/shop/routerShop')
 // const adminRouter=require('./routers/admin/routerAdmin')
 
